@@ -10,25 +10,3 @@ FFMPEG:
     ffmpeg/COPYING.LGPLv3
     ffmpeg/COPYING.GPLv2
     ffmpeg/COPYING.GPLv3
-
-freetype2:
-    freetype2/docs/GPLv2.TXT
-    freetype2/docs/FTL.TXT
-
-x264:
-    x264/COPYING
-
-expat:
-    expat/COPYING
-
-fontconfig:
-    fontconfig/COPYING
-
-fribidi:
-    fribidi/COPYING
-
-libass:
-    libass/COPYING
-
-libpng:
-    libpng/LICENSE
