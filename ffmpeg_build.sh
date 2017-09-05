@@ -37,7 +37,6 @@ make clean
 --enable-runtime-cpudetect \
 --enable-nonfree \
 --disable-network \
---enable-filters \
 --enable-avresample \
 --enable-avformat \
 --enable-avcodec \
@@ -48,10 +47,7 @@ make clean
 --enable-gpl \
 --enable-small \
 --disable-filters \
---enable-filter=volume \
 --enable-filter=trim \
---enable-filter=concat \
---enable-filter=rotate \
 --enable-filter=aresample \
 --enable-filter=copy \
 --enable-filter=fps \
@@ -119,9 +115,6 @@ make clean
 --enable-decoder=mpeg4 \
 --enable-decoder=mpeg2video \
 --enable-decoder=mpegvideo \
---enable-decoder=vp8 \
---enable-decoder=vp9 \
---enable-decoder=rawvideo \
 --enable-decoder=mjpeg \
 --disable-parsers \
 --enable-parser=aac \
@@ -135,8 +128,6 @@ make clean
 --enable-parser=mjpeg \
 --enable-parser=h264 \
 --enable-parser=vorbis \
---enable-parser=vp8 \
---enable-parser=vp9 \
 --disable-protocols \
 --enable-protocol=file \
 --enable-protocol=concat \
@@ -144,7 +135,8 @@ make clean
 --prefix="${2}/build/${1}" \
 --extra-cflags="-I${TOOLCHAIN_PREFIX}/include $CFLAGS" \
 --extra-ldflags="-L${TOOLCHAIN_PREFIX}/lib $LDFLAGS" \
---extra-cxxflags="$CXX_FLAGS" || exit 1
+--extra-cxxflags="$CXX_FLAGS" \
+--extra-libs="-lx264 -lm" || exit 1
 
 make -j${NUMBER_OF_CORES} && make install || exit 1
 

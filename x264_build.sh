@@ -26,6 +26,7 @@ echo $CFLAGS
   --enable-static \
   --disable-shared \
   --prefix="${TOOLCHAIN_PREFIX}" \
+  --extra-cflags="-O3" \
   --disable-cli || exit 1
 
 make -j${NUMBER_OF_CORES} install || exit 1
