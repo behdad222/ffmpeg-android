@@ -20,8 +20,8 @@ make clean
 --cross-prefix="$CROSS_PREFIX" \
 --arch="$NDK_ABI" \
 --cpu="$CPU" \
---enable-runtime-cpudetect \
 --sysroot="$NDK_SYSROOT" \
+--enable-libx264 \
 --enable-pthreads \
 --disable-debug \
 --disable-ffserver \
@@ -29,7 +29,6 @@ make clean
 --enable-hardcoded-tables \
 --disable-ffplay \
 --disable-ffprobe \
---enable-gpl \
 --enable-yasm \
 --disable-doc \
 --disable-shared \
@@ -44,8 +43,6 @@ make clean
 --enable-avcodec \
 --enable-indev=lavfi \
 --enable-hwaccels \
---enable-mediacodec \
---enable-jni \
 --enable-ffmpeg \
 --enable-zlib \
 --enable-gpl \
@@ -66,7 +63,6 @@ make clean
 --enable-filter=setpts \
 --enable-filter=setdar \
 --enable-filter=setsar \
---enable-filter=trim \
 --enable-filter=transpose \
 --enable-filter=crop \
 --enable-bsf=aac_adtstoasc \
